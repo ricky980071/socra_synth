@@ -76,7 +76,7 @@ for agent in ["agent-A","agent-B"]:
         c_lv=contentious_level_B
         counter_agent="agent-A"
         if(support_or_choice==1):
-            role="supporter"
+            role="opponets"
         else:
             role=f" advocate for {choice_for_B}"
     # Generate content for each date
