@@ -6,7 +6,7 @@ dir = os.path.dirname(os.path.abspath(__file__))
 topic_path = os.path.join(dir, 'topics')
 A_path = os.path.join(topic_path, 'A.txt')
 B_path = os.path.join(topic_path, 'B.txt')
-Out_path = os.path.join(dir, 'output', 'capital_punishment.csv')
+Out_path = os.path.join(dir, 'output', 'Pokemon_Go.csv')
 
 def readTxt(path):
     line_count = 0
