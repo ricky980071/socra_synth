@@ -1,3 +1,5 @@
 *.txt
 /gen_ANS/topics/*.txt
+/gen_ANS/output/*.txt
 .DS_Store
+/Chou/*
