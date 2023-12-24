@@ -18,12 +18,13 @@ def readTxt(path):
         for line in f:
             if len(line) <= 1:
                 continue
-            if line[1] == '.':
-                topics.append(line[3:-1].replace('*', '').replace(':', ''))
+            line = line.replace('*', '').replace('\n', '')
+            if line[1] == '.' or line[-1] == ':':
+                topics.append(line[3:].replace(':', ''))
                 topic_gotten = True
                 topic_count += 1
             elif topic_gotten is True:
-                contents.append(line[:-1].replace('Conclusion: ', ''))
+                contents.append(line.replace('Conclusion: ', '').replace('-', ''))
                 topic_gotten = False
             elif topic_count == 5:
                 conclusion = line[:-1]
@@ -39,5 +40,6 @@ def writeCSV(path, topics, A_contents, B_contents, A_conclusion, B_conclusion):
 
 A_topics, A_contents, A_conclusion = readTxt(A_path)
 B_topics, B_contents, B_conclusion = readTxt(B_path)
+print(A_topics)
 writeCSV(Out_path, A_topics, A_contents, B_contents, A_conclusion, B_conclusion)
 
