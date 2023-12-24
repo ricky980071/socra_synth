@@ -6,7 +6,7 @@ dir = os.path.dirname(os.path.abspath(__file__))
 topic_path = os.path.join(dir, 'topics')
 A_path = os.path.join(topic_path, 'A.txt')
 B_path = os.path.join(topic_path, 'B.txt')
-Out_path = os.path.join(dir, 'output', 'Pokemon_Go.csv')
+Out_path = os.path.join(dir, 'output', 'house_tax.csv')
 
 def readTxt(path):
     line_count = 0
@@ -20,7 +20,8 @@ def readTxt(path):
             line = line.replace('*', '').replace('\n', '').replace(
                 'Conclusion: ', '').replace('-', '').replace(':', '').replace(
                 '1.', '').replace('2.', '').replace('3.', '').replace(
-                '4.', '').replace('5.', '').strip()
+                '4.', '').replace('5.', '').replace('Topic','').replace('topic','').replace(
+                '#', '').replace('1', '').replace('2', '').replace('3', '').replace('4', '').replace('5', '').strip()
             
             if line_count == 0:
                 line_count += 1
@@ -46,6 +47,6 @@ def writeCSV(path, topics, A_contents, B_contents, A_conclusion, B_conclusion):
 
 A_topics, A_contents, A_conclusion = readTxt(A_path)
 B_topics, B_contents, B_conclusion = readTxt(B_path)
-print(A_topics)
+
 writeCSV(Out_path, A_topics, A_contents, B_contents, A_conclusion, B_conclusion)
 

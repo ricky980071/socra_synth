@@ -1,7 +1,7 @@
 
 #--------------------------------enter param----------------------------------------------
-subject_topic_='Does the individual determine individual destiny, not society?'
-filename='individual_destiny'#key in subject topic for filename
+subject_topic_ = 'Should academic research be regulated by sensitive political issues?'
+filename = 'academic'  # key in subject topic for filename
 contentious_level_A=0.9
 contentious_level_B=0.9
 # contentious_level_A=0.65
