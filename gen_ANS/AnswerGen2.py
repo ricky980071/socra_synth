@@ -6,7 +6,7 @@ dir = os.path.dirname(os.path.abspath(__file__))
 topic_path = os.path.join(dir, 'topics')
 A_path = os.path.join(topic_path, 'A.txt')
 B_path = os.path.join(topic_path, 'B.txt')
-Out_path = os.path.join(dir, 'output', 'house_tax.csv')
+Out_path = os.path.join(dir, 'output', 'good_evil.csv')
 
 def readTxt(path):
     line_count = 0
@@ -17,7 +17,7 @@ def readTxt(path):
         for line in f:
             if len(line) <= 1:
                 continue
-            line = line.replace('*', '').replace('\n', '').replace(
+            line = line.replace('*', '').replace('#', '').replace('\n', '').replace(
                 'Conclusion: ', '').replace('-', '').replace(':', '').replace(
                 '1.', '').replace('2.', '').replace('3.', '').replace(
                 '4.', '').replace('5.', '').replace('Topic','').replace('topic','').replace(
