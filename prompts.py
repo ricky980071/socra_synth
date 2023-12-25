@@ -1,15 +1,15 @@
 
 #--------------------------------enter param----------------------------------------------
-subject_topic_="Can sex and love be separated?"
-filename='sex_love'#key in subject topic for filename
+subject_topic_="Should we establish the citizen judge system?"
+filename='citizen_judge'#key in subject topic for filename
 contentious_level_A=0.9
 contentious_level_B=0.9
 # contentious_level_A=0.65
 # contentious_level_B=0.65
 support_or_choice=1#support=1,choice=2
 
-choice_for_A="keep going on"
-choice_for_B="give up"
+choice_for_A="to keep going on"
+choice_for_B="to give up"
 #------------------------------------------------------------------------------
 
 
